@@ -18,6 +18,7 @@ public class ReportDomain {
 
     private int titleHeight;
     private int columnHeaderHeight;
+    private int detailHeight = CellDomain.CELL_HEIGHT;
 
     private int summaryHeight;
 
@@ -76,5 +77,13 @@ public class ReportDomain {
 
     public void setSummaryHeight(int summaryHeight) {
         this.summaryHeight = summaryHeight;
+    }
+
+    public int getDetailHeight() {
+        return detailHeight;
+    }
+
+    public void setDetailHeight(int detailHeight) {
+        this.detailHeight = detailHeight;
     }
 }

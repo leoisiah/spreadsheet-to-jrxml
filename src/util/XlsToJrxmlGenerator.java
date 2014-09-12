@@ -103,9 +103,9 @@ public class XlsToJrxmlGenerator {
 
 
         ReportDomain reportDomain = new ReportDomain();
-        reportDomain.setTitleHeight(columnHeaderStart*20);
-        reportDomain.setColumnHeaderHeight((columnHeaderEnd-columnHeaderStart)*20);
-        reportDomain.setSummaryHeight((rowCount-summaryStart)*20);
+        reportDomain.setTitleHeight(columnHeaderStart*CellDomain.CELL_HEIGHT);
+        reportDomain.setColumnHeaderHeight((columnHeaderEnd-columnHeaderStart)*CellDomain.CELL_HEIGHT);
+        reportDomain.setSummaryHeight((rowCount-summaryStart)*CellDomain.CELL_HEIGHT);
 
         List<CellDomain> titleCells = getCellDomains(sheet, 0, columnHeaderStart, columnCount, lefts, modifiedWidths);
         List<CellDomain> columnHeaderCells = getCellDomains(sheet, columnHeaderStart, columnHeaderEnd, columnCount, lefts, modifiedWidths);
@@ -324,7 +324,7 @@ public class XlsToJrxmlGenerator {
 
                         CellDomain cellDomain = new CellDomain();
                         cellDomain.setText(text);
-                        cellDomain.setTop((i-rowStart)*20);
+                        cellDomain.setTop((i-rowStart)*CellDomain.CELL_HEIGHT);
                         cellDomain.setLeft(lefts.get(j));
                         int width = modifiedWidths.get(j);
                         cellDomain.setWidth(width);

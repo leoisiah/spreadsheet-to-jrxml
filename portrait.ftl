@@ -26,7 +26,7 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="${reportDomain.detailHeight}" splitType="Stretch">
 		<#list reportDomain.detailCells as cell>
 			<@d.detailCell cell/>
 		</#list>					

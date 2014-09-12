@@ -8,10 +8,13 @@ package domain;
  * To change this template use File | Settings | File Templates.
  */
 public class CellDomain {
+
+    public static int CELL_HEIGHT = 15;
+
     private int top;
     private int left;
     private int width;
-    private int height = 20;
+    private int height = CELL_HEIGHT;
     private String horizontalAlign = "Center";
     private String verticalAlign = "Middle";
     private String text = "";
