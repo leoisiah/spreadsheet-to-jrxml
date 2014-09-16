@@ -65,8 +65,12 @@ public class XlsToJrxmlGenerator {
 
     private static String generateOutputFilename(File file, int i) {
         String path = file.getAbsolutePath();
-
-        return path.substring(0, path.lastIndexOf('.'))+"_"+(i+1)+".jrxml";
+        String outputPath = path.substring(0, path.lastIndexOf('.'));
+        if(i!=0) {
+            outputPath += "_"+(i+1);
+        }
+        outputPath += ".jrxml";
+        return outputPath;
     }
 
 
