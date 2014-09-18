@@ -158,7 +158,10 @@ public class XlsToJrxmlGenerator {
                 if(cell!=null && !cell.toString().equals("")) {
                     numberOfNonEmptyCells++;
                     if(cell.getCellType()!=1) {
-                        isDetail = true;
+                        if(getColumnWidth(sheet,j)!=0) {
+                            isDetail = true;
+                        }
+
                     }
 
                 }
